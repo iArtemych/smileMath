@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fgw-Rr-rA7">
+    <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--iPad Main View Controller-->
+        <scene sceneID="oIg-TI-2wH">
+            <objects>
+                <viewController id="Fgw-Rr-rA7" customClass="IPadMainViewController" customModule="SmileMath" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hJ7-6I-JWC">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="wnX-DS-cxP">
+                                <rect key="frame" x="40" y="60" width="1286" height="427"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9d-Rf-vyf" customClass="TaskView" customModule="SmileMath" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="628" height="427"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smX-3B-xGL" customClass="NumPadView" customModule="SmileMath" customModuleProvider="target">
+                                        <rect key="frame" x="658" y="0.0" width="628" height="427"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="smX-3B-xGL" firstAttribute="width" secondItem="O9d-Rf-vyf" secondAttribute="width" id="0kx-Kk-HOT"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="xjq-If-48k">
+                                <rect key="frame" x="40" y="517" width="1286" height="427"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTf-aT-GNa">
+                                        <rect key="frame" x="0.0" y="0.0" width="628" height="427"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mv-dG-ZnL">
+                                        <rect key="frame" x="658" y="0.0" width="628" height="427"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GTf-aT-GNa" firstAttribute="width" secondItem="4mv-dG-ZnL" secondAttribute="width" id="woE-SB-zeP"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Kdb-iC-6ZJ" firstAttribute="trailing" secondItem="wnX-DS-cxP" secondAttribute="trailing" constant="40" id="V1m-8i-fVm"/>
+                            <constraint firstItem="xjq-If-48k" firstAttribute="top" secondItem="wnX-DS-cxP" secondAttribute="bottom" constant="30" id="Yyj-c7-bUh"/>
+                            <constraint firstItem="Kdb-iC-6ZJ" firstAttribute="bottom" secondItem="xjq-If-48k" secondAttribute="bottom" constant="60" id="bVZ-9v-Ufd"/>
+                            <constraint firstItem="wnX-DS-cxP" firstAttribute="height" secondItem="xjq-If-48k" secondAttribute="height" id="gGb-jg-SsG"/>
+                            <constraint firstItem="Kdb-iC-6ZJ" firstAttribute="trailing" secondItem="xjq-If-48k" secondAttribute="trailing" constant="40" id="jOy-6h-bQF"/>
+                            <constraint firstItem="wnX-DS-cxP" firstAttribute="leading" secondItem="Kdb-iC-6ZJ" secondAttribute="leading" constant="40" id="kDx-v5-leF"/>
+                            <constraint firstItem="xjq-If-48k" firstAttribute="leading" secondItem="Kdb-iC-6ZJ" secondAttribute="leading" constant="40" id="kVV-og-Hdn"/>
+                            <constraint firstItem="wnX-DS-cxP" firstAttribute="top" secondItem="Kdb-iC-6ZJ" secondAttribute="top" constant="60" id="tMn-nC-B3A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kdb-iC-6ZJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="taskAndPadStack" destination="wnX-DS-cxP" id="lUF-4c-27b"/>
+                        <outlet property="taskView" destination="O9d-Rf-vyf" id="Abc-0O-Zxl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="be2-XP-O4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="171.74231332357246" y="119.53124999999999"/>
+        </scene>
+    </scenes>
+</document>
