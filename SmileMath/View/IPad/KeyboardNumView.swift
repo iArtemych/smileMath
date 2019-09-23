@@ -8,14 +8,12 @@
 
 import UIKit
 
-class NumPadView: UIView {
+class KeyboardNumView: UIView {
 
     //MARK: - Constants
     
     //MARK: - Variables
-    
-    var oneButton = UIButton(), twoButton = UIButton(), threeButton = UIButton(), minusButton = UIButton(), fourButton = UIButton(), fiveButton = UIButton(), sixButton = UIButton(), pointButton = UIButton(), sevenButton = UIButton(), eightButton = UIButton(), nineButton = UIButton(), zeroButton = UIButton()
-//    var buttonsArray: [UIButton] = [oneButton, twoButton]
+    private var numPadView: NumPadView!
     
     lazy var blurView: UIVisualEffectView = {
           
@@ -29,24 +27,6 @@ class NumPadView: UIView {
         let view = UIVisualEffectView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
-    }()
-    
-    lazy var firstStack: UIStackView = {
-        
-        let stack = UIStackView()
-        return createStack(stack: stack)
-    }()
-    
-    lazy var secondStack: UIStackView = {
-        
-        let stack = UIStackView()
-        return createStack(stack: stack)
-    }()
-    
-    lazy var thirdStack: UIStackView = {
-        
-        let stack = UIStackView()
-        return createStack(stack: stack)
     }()
     
     //MARK: - LifeStyle View
@@ -68,6 +48,7 @@ class NumPadView: UIView {
         super.init(coder: coder)
         
         setupBlureView()
+        setupKeyboard()
     }
     
     //MARK: - Actions
@@ -75,6 +56,27 @@ class NumPadView: UIView {
     //MARK: - Navigation
     
     //MARK: - Private methods
+    private func setupKeyboard() {
+        
+        numPadView = NumPadView.loadFromNib()
+        vibrancyView.contentView.addSubview(numPadView)
+        numPadView.translatesAutoresizingMaskIntoConstraints = false
+        
+//        numPadView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+//        numPadView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+//        numPadView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+//        numPadView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        if let pad = numPadView {
+            let verticalSpaceTop = NSLayoutConstraint(item: pad, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0)
+            let verticalSpaceBottom = NSLayoutConstraint(item: pad, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: -5)
+            let horisontalSpaceTrailing = NSLayoutConstraint(item: pad, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: -20)
+            let horisontalSpaceLeading = NSLayoutConstraint(item: pad, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 20)
+            NSLayoutConstraint.activate([verticalSpaceTop, verticalSpaceBottom, horisontalSpaceLeading, horisontalSpaceTrailing])
+        }
+        
+        
+    }
+    
     private func setupBlureView() {
         let blurEffect: UIBlurEffect
         if #available(iOS 13.0, *) {
@@ -110,13 +112,5 @@ class NumPadView: UIView {
         vibrancyView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         vibrancyView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         vibrancyView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-    }
-    
-    private func createStack(stack: UIStackView)-> UIStackView {
-        
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.spacing = 10
-        stack.axis = .horizontal
-        return stack
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fgw-Rr-rA7">
-    <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="dark"/>
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -13,18 +13,18 @@
             <objects>
                 <viewController id="Fgw-Rr-rA7" customClass="IPadMainViewController" customModule="SmileMath" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hJ7-6I-JWC">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="wnX-DS-cxP">
-                                <rect key="frame" x="40" y="60" width="1286" height="427"/>
+                                <rect key="frame" x="40" y="60" width="944" height="598"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9d-Rf-vyf" customClass="TaskView" customModule="SmileMath" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="628" height="427"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="457" height="598"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smX-3B-xGL" customClass="NumPadView" customModule="SmileMath" customModuleProvider="target">
-                                        <rect key="frame" x="658" y="0.0" width="628" height="427"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smX-3B-xGL" customClass="KeyboardNumView" customModule="SmileMath" customModuleProvider="target">
+                                        <rect key="frame" x="487" y="0.0" width="457" height="598"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
@@ -33,14 +33,14 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="xjq-If-48k">
-                                <rect key="frame" x="40" y="517" width="1286" height="427"/>
+                                <rect key="frame" x="40" y="688" width="944" height="598"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTf-aT-GNa">
-                                        <rect key="frame" x="0.0" y="0.0" width="628" height="427"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTf-aT-GNa" customClass="PainView" customModule="SmileMath" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="457" height="598"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mv-dG-ZnL">
-                                        <rect key="frame" x="658" y="0.0" width="628" height="427"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mv-dG-ZnL" customClass="StatisticView" customModule="SmileMath" customModuleProvider="target">
+                                        <rect key="frame" x="487" y="0.0" width="457" height="598"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
