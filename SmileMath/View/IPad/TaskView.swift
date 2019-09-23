@@ -10,7 +10,6 @@ import UIKit
 
 class TaskView: UIView {
     
-    
     //MARK: - Constants
     
     //MARK: - Variables

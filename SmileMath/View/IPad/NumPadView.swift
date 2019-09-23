@@ -56,44 +56,11 @@ class NumPadView: UIView {
         }
     }
     
-    @IBAction func oneTap(_ sender: Any) {
-        tapToKeyboardButton(symbol: "1")
-    }
     
-    @IBAction func twoTap(_ sender: Any) {
-        tapToKeyboardButton(symbol: "2")
-    }
-    
-    @IBAction func threeTap(_ sender: Any) {
-        tapToKeyboardButton(symbol: "3")
-    }
-    
-    @IBAction func fourTap(_ sender: Any) {
-        tapToKeyboardButton(symbol: "4")
-    }
-    
-    @IBAction func fiveTap(_ sender: Any) {
-        tapToKeyboardButton(symbol: "5")
-    }
-    
-    @IBAction func sixTap(_ sender: Any) {
-        tapToKeyboardButton(symbol: "6")
-    }
-    
-    @IBAction func sevenTap(_ sender: Any) {
-        tapToKeyboardButton(symbol: "7")
-    }
-    
-    @IBAction func eightTap(_ sender: Any) {
-        tapToKeyboardButton(symbol: "8")
-    }
-    
-    @IBAction func nineTap(_ sender: Any) {
-        tapToKeyboardButton(symbol: "9")
-    }
-    
-    @IBAction func zeroTap(_ sender: Any) {
-        tapToKeyboardButton(symbol: "0")
+    @IBAction func numberTap(_ sender: UIButton!) {
+        
+        let tag = sender.tag
+        tapToKeyboardButton(symbol: String(tag))
     }
     
     @IBAction func pointTap(_ sender: Any) {

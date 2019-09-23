@@ -20,7 +20,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="CnW-fg-nuw">
                             <rect key="frame" x="0.0" y="0.0" width="638" height="70"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRv-uu-gt1">
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRv-uu-gt1">
                                     <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                     <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -32,10 +32,10 @@
                                         <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="oneTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="rNN-Ui-0KV"/>
+                                        <action selector="numberTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="Otc-qk-hyk"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgg-w3-Dhd">
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgg-w3-Dhd">
                                     <rect key="frame" x="189.5" y="0.0" width="70" height="70"/>
                                     <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="33"/>
@@ -43,10 +43,10 @@
                                         <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="twoTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="j9Y-h7-bxR"/>
+                                        <action selector="numberTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="iyT-C6-7Lv"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZG-Yv-CaE">
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZG-Yv-CaE">
                                     <rect key="frame" x="378.5" y="0.0" width="70" height="70"/>
                                     <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="33"/>
@@ -54,7 +54,7 @@
                                         <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="threeTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="mAb-Em-pwU"/>
+                                        <action selector="numberTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="Twq-g2-Ziy"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cil-05-Gv9">
@@ -78,7 +78,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="K84-ZR-xpd">
                             <rect key="frame" x="0.0" y="81" width="638" height="70"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08N-MA-RIm">
+                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08N-MA-RIm">
                                     <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                     <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -90,10 +90,10 @@
                                         <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="fourTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="IX7-u0-4Kg"/>
+                                        <action selector="numberTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ra9-oe-D9X"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyf-mj-rqB">
+                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyf-mj-rqB">
                                     <rect key="frame" x="189.5" y="0.0" width="70" height="70"/>
                                     <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="33"/>
@@ -101,10 +101,10 @@
                                         <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="fiveTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="kTm-y7-e82"/>
+                                        <action selector="numberTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="uui-VY-KJ3"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F73-xU-V2K">
+                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F73-xU-V2K">
                                     <rect key="frame" x="378.5" y="0.0" width="70" height="70"/>
                                     <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="33"/>
@@ -112,7 +112,7 @@
                                         <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="sixTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="44v-yX-YUx"/>
+                                        <action selector="numberTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="vYX-UY-qQv"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45y-uQ-DbA">
@@ -136,7 +136,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="UWO-CR-pbb">
                             <rect key="frame" x="0.0" y="162" width="638" height="70"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kt5-NF-fyO">
+                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kt5-NF-fyO">
                                     <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                     <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -148,10 +148,10 @@
                                         <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="sevenTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="hrV-aw-ZSx"/>
+                                        <action selector="numberTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="CRr-V5-ZgB"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pa-nL-Kfe">
+                                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pa-nL-Kfe">
                                     <rect key="frame" x="189.5" y="0.0" width="70" height="70"/>
                                     <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="33"/>
@@ -159,10 +159,10 @@
                                         <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="eightTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="hW0-ug-KUG"/>
+                                        <action selector="numberTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="GkW-k3-hJm"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViL-pn-QVu">
+                                <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViL-pn-QVu">
                                     <rect key="frame" x="378.5" y="0.0" width="70" height="70"/>
                                     <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="33"/>
@@ -170,7 +170,7 @@
                                         <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="nineTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="5QZ-8a-lbz"/>
+                                        <action selector="numberTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="l3w-SL-Muj"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8j-6J-p7e">
@@ -181,7 +181,7 @@
                                         <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="zeroTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="8s7-Bk-mEe"/>
+                                        <action selector="numberTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="4NI-3a-WFp"/>
                                     </connections>
                                 </button>
                             </subviews>
